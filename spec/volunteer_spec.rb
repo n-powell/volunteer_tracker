@@ -72,18 +72,18 @@ describe("Volunteer") do
 
   describe("#update") do
     it("lets you update volunteer in the database") do
-      project = Volunteer.new({:name => "Kyle", :id => nil})
-      project.save()
-      project.update({:name => "Kyle Keyboard"})
-      expect(project.name()).to(eq("Kyle Keyboard"))
+      volunteer = Volunteer.new({:name => "Kyle", :id => nil, :project_id => 2})
+      volunteer.save()
+      volunteer.update({:name => "Kyle Keyboard"})
+      expect(volunteer.name()).to(eq("Kyle Keyboard"))
     end
   end
 
   describe("#delete") do
     it("lets you delete a volunteer from the database") do
-      project = Volunteer.new({:name => "Kyle Keyboard", :id => nil})
-      project.save()
-      project.delete()
+      volunteer = Volunteer.new({:name => "Kyle Keyboard", :project_id => 2, :id => nil,})
+      volunteer.save()
+      volunteer.delete()
       expect(Volunteer.all()).to(eq([]))
     end
   end

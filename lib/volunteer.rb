@@ -37,4 +37,15 @@ class Volunteer
     end
     found_volunteer
   end
+
+  define_method(:update) do |attributes|
+    @name = attributes.fetch(:name)
+    @id = self.id()
+    DB.exec("UPDATE volunteers SET name = '#{@name}' WHERE id = #{@id};")
+  end
+
+  define_method(:delete) do
+    DB.exec("DELETE FROM volunteers WHERE id = #{self.id};")
+  end
+
 end

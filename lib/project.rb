@@ -52,7 +52,7 @@ class Project
   define_method(:update) do |attributes|
     @name = attributes.fetch(:name)
     @id = self.id()
-    DB.exec("UPDATE volunteers SET name = '#{@name}' WHERE id = #{@id};")
+    DB.exec("UPDATE projects SET name = '#{@name}' WHERE id = #{@id};")
   end
 
   define_method(:delete) do
