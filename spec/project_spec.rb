@@ -72,6 +72,7 @@ describe("Project") do
   it("lets you delete a project from the database") do
     project = Project.new({:name => "Sweeping", :id => nil})
     project.save()
+    project.delete()
     expect(Project.all()).to(eq([]))
   end
 end
