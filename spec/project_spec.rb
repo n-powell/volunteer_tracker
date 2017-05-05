@@ -58,4 +58,13 @@ describe("Project") do
       expect(project.volunteers(project.id)).to(eq([volunteer1, volunteer2]))
     end
   end
+
+  describe("#update") do
+    it("lets you update project in the database") do
+      project = Project.new({:name => "Sweeping", :id => nil})
+      project.save()
+      project.update({:name => "Sweeping the garage"})
+      expect(project.name()).to(eq("Sweeping the garage"))
+    end
+  end
 end
