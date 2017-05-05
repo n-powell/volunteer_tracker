@@ -13,4 +13,11 @@ describe("Project") do
       expect(project.name()).to(eq("Tree Planting"))
     end
   end
+
+  describe("#id") do
+    it("tells you the project id") do
+      project = Project.new({:name => "Tree Planting", :id => 2})
+      expect(project.id()).to(eq(2))
+    end
+  end
 end
