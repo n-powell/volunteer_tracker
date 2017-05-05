@@ -32,7 +32,7 @@ describe("Project") do
   describe("#save") do
     it("tells you save the project to the database") do
       project = Project.new({:name => "Tree Planting", :id => nil})
-      procest.save()
+      project.save()
       expect(project.name()).to(eq("Tree Planting"))
     end
   end
