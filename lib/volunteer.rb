@@ -18,4 +18,15 @@ class Volunteer
     end
     volunteers
   end
+
+  define_method(:==) do |another_project|
+    self.name().==(another_project.name()).&(self.id().==(another_project.id()))
+  end
+
+  define_method(:save) do
+    result = DB.exec("INSERT INTO volunteers (name) VALUES ('#{@name}') RETURNING id;")
+    result = DB.exec("INSERT INTO volunteers (project_id) VALUES ('#{@project_id}') RETURNING id;")
+    @id = result.first().fetch("id").to_i()
+  end
+
 end
