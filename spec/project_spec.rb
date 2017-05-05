@@ -36,4 +36,14 @@ describe("Project") do
       expect(project.name()).to(eq("Tree Planting"))
     end
   end
+
+  describe(".find") do
+    it("returns a project by its ID") do
+      test_project = Project.new({:name => "Garbage Pickup", :id => nil})
+      test_project.save()
+      test_project2 = Project.new({:name => "Tree Planting", :id => nil})
+      test_project2.save()
+      expect(Project.find(test_project2.id())).to(eq(test_project2))
+    end
+  end
 end
