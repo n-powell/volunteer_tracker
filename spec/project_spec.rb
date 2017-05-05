@@ -20,4 +20,20 @@ describe("Project") do
       expect(project.id()).to(eq(2))
     end
   end
+
+  describe("#==") do
+    it("is the same project if it has the same name") do
+      project1 = Project.new({:name => "Tree Planting", :id => nil})
+      project2 = Project.new({:name => "Tree Planting", :id => nil})
+      expect(project1).to(eq(project2))
+    end
+  end
+
+  describe("#save") do
+    it("tells you save the project to the database") do
+      project = Project.new({:name => "Tree Planting", :id => nil})
+      procest.save()
+      expect(project.name()).to(eq("Tree Planting"))
+    end
+  end
 end
