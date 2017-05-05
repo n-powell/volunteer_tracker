@@ -39,10 +39,10 @@ class Project
   end
 
 
-  define_method(:volunteers) do |project_id|
+  define_method(:volunteers) do |id|
     found_volunteers = []
     Volunteer.all().each() do |volunteer|
-      if volunteer.project_id().==(project_id)
+      if volunteer.project_id().==(id)
         found_volunteers.push(volunteer)
       end
     end
