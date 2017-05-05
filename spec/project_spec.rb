@@ -58,5 +58,4 @@ describe("Project") do
       expect(project.volunteers(project.id)).to(eq([volunteer1, volunteer2]))
     end
   end
-  
 end
