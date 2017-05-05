@@ -59,4 +59,14 @@ describe("Volunteer") do
       expect(volunteer.id()).to(be_an_instance_of(Fixnum))
     end
   end
+
+  describe(".find") do
+    it("returns a volunteer by their ID") do
+      test_volunteer1 = Volunteer.new({:name => "Kyle", :id => nil, :project_id => 2})
+      test_volunteer1.save()
+      test_volunteer2 = Volunteer.new({:name => "Kyle", :id => nil, :project_id => 2})
+      test_volunteer2 .save()
+      expect(Volunteer.find(test_volunteer2.id())).to(eq(test_volunteer2))
+    end
+  end
 end
