@@ -2,9 +2,11 @@
 
 <form action="/volunteers/<%= @volunteer.id() %>" method="post">
   <input name="_method" type="hidden" value="patch">
+  <input id="project_id" name="project_id" type="hidden" value= "<%= @volunteer.project_id() %>>">
 
   <label for="volunteer_name">Rename your volunteer:</label>
   <input id="volunteer_name" name="volunteer_name" type="text" required>
+
 
   <button type="submit">Update</button>
 </form>
