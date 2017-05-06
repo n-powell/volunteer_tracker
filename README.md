@@ -16,6 +16,19 @@ This is a tracker for volunteers and projects for a small non-profit. This page 
 * _Navigate directory and open usin ruby app.rb_
 * _Using a web browser, type in the url localhost:4567_
 
+## _load psql database with:_
+### _CREATE TABLE "projects" (
+"id"  SERIAL ,
+"name" VARCHAR ,
+PRIMARY KEY ("id")
+);
+
+CREATE TABLE "volunteers" (
+"id"  SERIAL ,
+"name" VARCHAR ,
+"project_id" INTEGER ,
+PRIMARY KEY ("id")
+);_
 
 ## Built With
 

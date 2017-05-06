@@ -88,7 +88,7 @@ delete("/volunteers/:id") do
   @volunteer = Volunteer.find(params.fetch("id").to_i())
   @volunteer.delete()
   @volunteers = Volunteer.all()
-  erb(:volunteer)
+erb(:volunteer)
 end
 
 delete("/projects/:id") do
