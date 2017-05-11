@@ -24,9 +24,11 @@ This is a tracker for volunteers and projects for a small non-profit. This page 
 
 * _Now run psql in terminal by running $psql_
 
-* _create a database by running $CREATE DATABASE volunteer_tracker;_
+* _Create a database by running $CREATE DATABASE volunteer_tracker;_
 
-* _load psql database with the following code in terminal after starting psql by running $psql:_
+* _Navigate into your new database using $c\ volunteer_tracker_
+
+* _Now load psql database with the following code_
 
 
 CREATE TABLE "projects" (
@@ -42,17 +44,17 @@ CREATE TABLE "volunteers" (
 PRIMARY KEY ("id")
 );_
 
-* _Note: This next step must only be done after your first main database in made because the next test database is a templat or "clone" of the current details of the main database. This includes the database name, tables, column names, and their corresponding data types._
+* _Note: This next step must only be done after your first main database is made, because the next test database is a template or "clone" of the current details of the main database. This includes the database name, tables, column names, and their corresponding data types._
 
-* _Secondary Note: This test database is created for all testing use as to not create any info to be stored in intended project critical main database._
+* _Secondary Note: This test database is created for all testing use. Intended to not create any info to be stored in intended project critical main database._
 
-* _create a test database by running CREATE DATABASE volunteer_tracker_test WITH TEMPLATE volunteer_tracker;_
+* _Create a test database by running CREATE DATABASE volunteer_tracker_test WITH TEMPLATE volunteer_tracker;_
 
 * _Navigate to cloned project folder in terminal_
 
 * _Run the sinatra launcher typing in the terminal $ ruby app.rb_
 
-* _open your web browser and type in the url path localhost:4567_
+* _Open your web browser and type in the url path localhost:4567_
 
 
 ## Built With
