@@ -8,7 +8,7 @@
 
 This is a tracker for volunteers and projects for a small non-profit. This page is designed to store information regarding volunteers association with particular projects.
 
-## Setup/Install
+## Simple Setup/Install
 
 * _Clone directory from github using git_
 * _Navigate into downloaded directory file using a terminal or your operating systems GUI finder_
@@ -16,8 +16,16 @@ This is a tracker for volunteers and projects for a small non-profit. This page 
 * _Navigate directory and open usin ruby app.rb_
 * _Using a web browser, type in the url localhost:4567_
 
-## _load psql database with:_
-### _CREATE TABLE "projects" (
+# Detailed install and run instructions
+
+* _Ensure you have postgres and psql installed on your machine_
+* _First run postgres in terminal by running $postgres_
+* _Now run psql in terminal by running $psql_
+* _create a database by running $CREATE DATABASE volunteer_tracker;_
+* _create a test database by running CREATE DATABASE volunteer_tracker_test WITH TEMPLATE volunteer_tracker;_
+
+* _load psql database with:_
+* _CREATE TABLE "projects" (
 "id"  SERIAL ,
 "name" VARCHAR ,
 PRIMARY KEY ("id")
@@ -30,6 +38,10 @@ CREATE TABLE "volunteers" (
 PRIMARY KEY ("id")
 );_
 
+* _Navigate to cloned project folder in terminal_
+* _Run the sinatra launcher typing in the terminal $ ruby app.rb_
+* _open your web browser and type in the url path localhost:4567_
+
 ## Built With
 
 * Ruby
@@ -38,6 +50,7 @@ PRIMARY KEY ("id")
 * HTML
 * CSS
 * Bootstrap
+* postgres
 * SQL
 
 
