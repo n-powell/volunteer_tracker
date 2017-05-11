@@ -78,8 +78,7 @@ PRIMARY KEY ("id")
 |As a non-profit employee, I want to add volunteers.|Add: Franklin|Volunteers: Franklin|
 |As a non-profit employee, I want delete volunteers.|Delete: Franklin|Volunteers: []|
 |As a non-profit employee, I want to update volunteers.|Update: Franklin Jones|Volunteers: Franklin Jones|
-|As a non-profit employee, I want to add volunteers to a project.|Add: Franklin To: Tree Planting|
-|Project: Tree Planting Volunteers: Franklin|
+|As a non-profit employee, I want to add volunteers to a project.|Add: Franklin To: Tree Planting| Project: Tree Planting Volunteers: Franklin|
 ## Authors
 
 * Nick Powell
