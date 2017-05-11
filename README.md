@@ -1,6 +1,6 @@
 # _Volunteer Tracker_
 
-### _Small business project to volunteer tracker_
+### _Non-profit volunteer tracker_
 ### _May 5, 2017_
 
 
