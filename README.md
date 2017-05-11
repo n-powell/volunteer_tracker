@@ -13,7 +13,7 @@ This is a tracker for volunteers and projects for a small non-profit. This page 
 * _Clone directory from github using git_
 * _Navigate into downloaded directory file using a terminal or your operating systems GUI finder_
 * _Download and install Ruby and the Sinatra Gem_
-* _Navigate directory and open usin ruby app.rb_
+* _Navigate directory and open using ruby app.rb_
 * _Using a web browser, type in the url localhost:4567_
 
 # Detailed install and run instructions
@@ -26,10 +26,10 @@ This is a tracker for volunteers and projects for a small non-profit. This page 
 
 * _create a database by running $CREATE DATABASE volunteer_tracker;_
 
-* _load psql database with the following code in termial after starting psql by running $psql:_
+* _load psql database with the following code in terminal after starting psql by running $psql:_
 
 
-_CREATE TABLE "projects" (
+CREATE TABLE "projects" (
 "id"  SERIAL ,
 "name" VARCHAR ,
 PRIMARY KEY ("id")
